@@ -33,6 +33,32 @@ class Solution(object):
                 j += 1
 
 
+"""BETTER SOLUTION
+# Initialize three pointers
+            # a.point at last number in nums1
+            # b.point at the last number of nums2
+            # c. point at the last index in nums1
+        index1, index2, insertIndex = m - 1, n - 1, m + n - 1
+
+        # While nums2 has numbers to merge
+        while index2 >= 0:
+            # Get the larger number and insert into the insertIndex of nums1
+            if index1 >=0 and nums1[index1] > nums2[index2]:
+                nums1[insertIndex] = nums1[index1]
+                index1 -= 1
+            else:
+                nums1[insertIndex] = nums2[index2]
+                index2 -= 1
+
+            insertIndex -= 1
+
+
+
+
+
+
+"""
+
             
 
             
